@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
 
 // Route
 import { ROUTING } from './path.routes';
@@ -10,6 +11,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { HomeComponent } from './home/home.component';
+import { FormularioComponent } from './formulario/formulario.component';
+
 
 
 @NgModule({
@@ -17,11 +20,13 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     NavbarComponent,
     ClienteComponent,
-    HomeComponent
+    HomeComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     ROUTING
   ],
   providers: [],
