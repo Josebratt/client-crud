@@ -2,7 +2,7 @@
     <div class="card border-primary mb-3 my-5">
         <div class="card-header">Lista de Clientes</div>
         <div class="p-2">
-            <button type="button" class="btn btn-primary">Crear Cliente</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['/formulario']" routerLinkActive="router-link-active" >Crear Cliente</button>
         </div>
         <div class="card-body text-primary">
             <table class="table">
@@ -16,22 +16,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                  <tr *ngFor="let cliente of clientes">
+                        <td>{{ cliente.id }}</td>
+                        <td>{{ cliente.name }}</td>
+                        <td>{{ cliente.lastName }}</td>
+                        <td>{{ cliente.email }}</td>
+                        <td>{{ cliente.createAt }}</td>
                   </tr>
                 </tbody>
             </table>
