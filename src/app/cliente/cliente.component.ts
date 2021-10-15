@@ -10,18 +10,16 @@ import { ClienteService } from '../services/cliente.service';
 })
 export class ClienteComponent implements OnInit {
 
-  listaCliente: Cliente[] = [];
+  clientes: Cliente[] = [];
 
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
       this.clienteService.getClientes()
           .subscribe( data => {
-            this.listaCliente = data;
-          });
-      console.log(this.listaCliente)    
+            this.clientes = data;
+          });     
   }
-
 }
 
 
