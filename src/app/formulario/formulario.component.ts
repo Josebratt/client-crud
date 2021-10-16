@@ -10,11 +10,18 @@ import { ClienteService } from '../services/cliente.service';
 })
 export class FormularioComponent implements OnInit {
 
-  clientes: Cliente[] = [];
+  clientes: Cliente = {
+    name: '',
+    lastName: '',
+    email: '',
+    id: 0,
+    createAt: ''
+  };
 
   constructor( private clienteService: ClienteService) { }
 
   ngOnInit(): void {
+    
   }
 
 }
