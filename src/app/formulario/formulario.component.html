@@ -4,15 +4,15 @@
         <div class="card-body text-primary">
             <div class="input-group mb-3">
                 <span class="input-group-text" > Nombre </span>
-                <input type="text" class="form-control" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" aria-describedby="basic-addon1" [(ngModel)]="clientes.name">
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" > Apellido </span>
-                <input type="text" class="form-control" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" aria-describedby="basic-addon2" [(ngModel)]="clientes.lastName" >
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" > Email </span>
-                <input type="text" class="form-control" aria-describedby="basic-addon3">
+                <input type="text" class="form-control" aria-describedby="basic-addon3"[(ngModel)]="clientes.email">
             </div>
             <button type="button" class="btn btn-primary" [routerLink]="['/cliente']" routerLinkActive="router-link-active" >Crear</button>
         </div> 
