@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cliente } from '../interface/cliente';
 import { ClienteService } from '../services/cliente.service';
 
@@ -18,10 +19,20 @@ export class FormularioComponent implements OnInit {
     createAt: ''
   };
 
-  constructor( private clienteService: ClienteService) { }
+  constructor( private clienteService: ClienteService, private router: Router) { }
 
   ngOnInit(): void {
     
+  }
+
+  public create(): void{
+      console.log("Clicked!");
+      console.log(this.clientes);
+
+      // this.clienteService.create(this.clientes)
+      //       .subscribe(data => {
+      //         
+      //       });
   }
 
 }
