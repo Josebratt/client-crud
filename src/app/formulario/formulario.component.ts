@@ -22,12 +22,13 @@ export class FormularioComponent implements OnInit {
   constructor( private clienteService: ClienteService, private router: Router) { }
 
   ngOnInit(): void {
-    
+    console.log("Clicked!");
+    console.log(this.clientes);
   }
 
   public create(): void{
-      console.log("Clicked!");
-      console.log(this.clientes);
+      // console.log("Clicked!");
+      // console.log(this.clientes);
 
       // this.clienteService.create(this.clientes)
       //       .subscribe(data => {
