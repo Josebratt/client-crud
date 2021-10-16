@@ -1,20 +1,22 @@
 <div class="container">
-    <div class="card border-primary mb-3 my-5">
+    <div class="card bg-dark text-white border-primary mb-3 my-5">
         <div class="card-header"><h3>Crear Clientes</h3></div>
         <div class="card-body text-primary">
-            <div class="input-group mb-3">
-                <span class="input-group-text" > Nombre </span>
-                <input type="text" class="form-control" aria-describedby="basic-addon1" [(ngModel)]="clientes.name">
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" > Apellido </span>
-                <input type="text" class="form-control" aria-describedby="basic-addon2" [(ngModel)]="clientes.lastName" >
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" > Email </span>
-                <input type="text" class="form-control" aria-describedby="basic-addon3"[(ngModel)]="clientes.email">
-            </div>
-            <button type="button" class="btn btn-primary" [routerLink]="['/cliente']" routerLinkActive="router-link-active" >Crear</button>
+            <form (ngSubmit) = create()>
+                <div class="form-group input-group mb-3">
+                    <span class="input-group-text" > Nombre </span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" [(ngModel)]="clientes.name" name="name" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" > Apellido </span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon2" [(ngModel)]="clientes.lastName" name="lastName" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" > Email </span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon3"[(ngModel)]="clientes.email" name="email" [ngModelOptions]="{standalone: true}">
+                </div>
+                <button type="button" role="button" class="btn btn-primary">Crear</button>
+            </form>
         </div> 
     </div>
 </div>
